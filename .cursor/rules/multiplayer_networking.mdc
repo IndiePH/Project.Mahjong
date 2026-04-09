@@ -1,0 +1,14 @@
+---
+description: NGO networking guardrails
+globs: ["**/Networking/**", "**/Multiplayer/**", "**/*Network*.cs", "**/*Rpc.cs"]
+---
+
+# Multiplayer Rules
+- Stack: Netcode for GameObjects (NGO) + Unity Transport.
+- Model: server-authoritative; client prediction only where needed.
+- Persistent sync via `NetworkVariable<T>`.
+- RPC roles: `[ServerRpc]` for client requests, `[ClientRpc]` for server notifications.
+- Validate every `ServerRpc` on server side.
+- Reduce bandwidth (quantize/bit-pack; send vectors only on meaningful delta).
+- Put network lifecycle logic in `OnNetworkSpawn` / `OnNetworkDespawn`.
+- Never trust client-sent positions, stats, or authority claims.

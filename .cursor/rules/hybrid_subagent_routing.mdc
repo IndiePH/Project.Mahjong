@@ -1,0 +1,29 @@
+---
+description: "Automatic hybrid routing for simple vs complex tasks"
+alwaysApply: true
+---
+
+# Hybrid Subagent Routing
+- Classify task complexity automatically from scope, ambiguity, risk, and diagnostics needs.
+- Use single-agent flow for simple tasks.
+- Use subagent workflow only for complex tasks.
+
+## Complexity Signals (+1 each)
+- Multi-system impact or 3+ files likely touched.
+- Ambiguous or underspecified request.
+- Parallel tracks needed (for example implementation + testing + risk).
+- High-risk domain (networking, save/persistence, economy, scene-wide changes).
+- Dedicated diagnostics required (logs, profiler, deep investigation).
+
+## Decision
+- Score `0-1`: simple -> no subagent fan-out.
+- Score `2+`: complex -> use orchestrated subagent flow.
+
+## Complex Flow (default order)
+- `orchestrator` -> planning and routing.
+- `context_curator` + `dependency_analyzer` in parallel where possible.
+- `task_planner`, `testing_coordinator`, `risk_assessor` as needed.
+- `result_aggregator` for final synthesis.
+- `memory_manager` / `version_control_tracker` for state and rollback tracking when relevant.
+
+No user keyword or manual tag is required; infer from intent.

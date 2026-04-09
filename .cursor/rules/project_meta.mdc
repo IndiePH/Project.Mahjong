@@ -1,0 +1,14 @@
+---
+description: "Core Unity project metadata"
+alwaysApply: true
+---
+
+# Project Meta
+- Unity 6.0.3f1, URP, NGO, New Input System.
+- C# 12; async uses `Awaitable`.
+- `Assets/Design/` (GDD/NDD) is the design source of truth.
+
+## Organization
+- Assets split by `Systems/` (reusable), `Features/` (project), `Core/` (shared glue).
+- Enforce boundaries with per-system `.asmdef`.
+- Use `--- SECTION ---` hierarchy separators in scenes.

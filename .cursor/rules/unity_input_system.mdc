@@ -1,0 +1,11 @@
+---
+description: Unity Input System guardrails
+globs: ["**/*.inputactions", "**/Input/**", "**/*Input*.cs", "**/*Movement*.cs"]
+---
+
+# Unity Input Rules
+- Use generated `PlayerInputActions` wrapper as the action source.
+- Handle actions through C# callbacks (`performed`, `canceled`).
+- Subscribe in `OnEnable` and unsubscribe in `OnDisable`.
+- Use `InputActionRebindingExtensions` for runtime rebinding.
+- Keep deadzones/normalization in the action setup, not ad-hoc per script.

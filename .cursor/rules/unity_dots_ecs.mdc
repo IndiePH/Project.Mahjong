@@ -1,0 +1,13 @@
+---
+description: Unity DOTS/ECS guardrails
+globs: ["**/*System.cs", "**/*Component.cs", "**/*Aspect.cs", "**/DOTS/**", "**/ECS/**"]
+---
+
+# Unity DOTS/ECS Rules
+- Entities 1.0+ conventions.
+- Prefer `ISystem` + `[BurstCompile]` by default.
+- Use `IJobEntity` for parallel iteration when safe.
+- Allocators: `Temp` (1 frame), `TempJob` (<=4 frames), `Persistent`.
+- Use native containers (`NativeArray<T>`, `NativeList<T>`, etc.) and always dispose.
+- Use `in` for read-only and `ref` for write access in jobs/aspects.
+- Put setup in `OnCreate`; filter work with `SystemAPI.Query<T>` / `EntityQuery`.

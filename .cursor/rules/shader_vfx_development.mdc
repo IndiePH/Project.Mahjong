@@ -1,0 +1,14 @@
+---
+description: URP shader/VFX performance guardrails
+globs: ["**/*.shader", "**/*.shadergraph", "**/*.vfx", "**/*.vfxgraph", "**/Shaders/**", "**/VFX/**", "**/*.mat"]
+---
+
+# Shader & VFX Rules
+- Target URP.
+- Default to Shader Graph and VFX Graph; use HLSL only when required.
+- Minimize overdraw: prefer opaque/clip over stacked transparency.
+- Keep SRP Batcher compatibility (proper constant buffer usage).
+- Keep fragment texture reads low (target 2-4); use packed maps when possible.
+- Use `half` by default; upgrade to `float` only for precision-critical paths.
+- Prefer GPU simulation for high-count VFX.
+- Trigger VFX from scripts with explicit events (for example, `VFX.SetEvent(...)`).

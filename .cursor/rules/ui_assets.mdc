@@ -1,0 +1,11 @@
+---
+description: "UI + asset loading guardrails"
+globs: ["**/UI/**", "**/*UI*.cs", "**/*Addressable*.cs", "Assets/Resources/**"]
+---
+
+# UI & Assets Standards
+
+- UI framework: UGUI.
+- Text: TextMeshPro only (no legacy `Text`).
+- Runtime loading: Addressables by default.
+- `Resources.Load` allowed only for `Assets/Resources/Data/*`.

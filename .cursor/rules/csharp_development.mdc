@@ -1,0 +1,14 @@
+---
+description: "C# + Unity coding guardrails"
+globs: ["**/*.cs"]
+---
+
+# C# & Unity Rules
+- Fields: `[SerializeField] private _camelCase`; avoid public fields.
+- Types/methods: `PascalCase`.
+- Async: Unity `Awaitable` only; avoid `async Task`.
+- Prefer Event Channels + Service Locator for decoupling.
+- Cache dependencies in `Awake`; no `GetComponent` in `Update`.
+- Pool high-frequency objects with `UnityEngine.Pool.ObjectPool<T>`.
+- Avoid UI string churn; use `StringBuilder` for frequent TMP updates.
+- Tests: NUnit + AAA; logic in `Tests/EditMode`, scene/physics in `Tests/PlayMode`.
