@@ -1,17 +1,20 @@
 ---
 name: unity_ui_systems
-description: Unity UI Systems. Guidelines for UGUI (Primary) and UI Toolkit with TextMeshPro standards.
+description: Unity UI Systems. Guidelines for UI Toolkit (Primary), UGUI fallback, and binding-first workflows.
 ---
 
 # UI Implementation
 
-## Primary: Unity UI Canvas (UGUI)
-- **TextMeshPro**: User `TextMeshProUGUI` instead of `Text`.
-- **Optimization**: Turn off **Raycast Target** on non-interactive elements.
+## Primary: UI Toolkit
+- **Binding first**: Prefer data binding for UI state whenever possible.
+- **Separation**: Keep business logic in presenters/controllers and UI state in bindable models.
+- **Data-driven UI**: Drive labels, thresholds, and display rules from UI/view data assets where practical.
+- **Styling**: Use USS for themes and visual states.
+- **Markup**: Build views with UXML and query by name in controller code only when binding is not enough.
 
-## Secondary: UI Toolkit
-- **Separation**: Split Business Logic (Controller) from UI Logic (View).
-- **Styling**: Use USS for themes.
+## Secondary: UGUI (Fallback)
+- Use only when a specific feature cannot be delivered cleanly with UI Toolkit.
+- If UGUI is used, keep TextMeshPro as text component standard.
 
 ## Project Selection
-**Project** defaults to **Unity UI Canvas / UGUI**.
+**Project** defaults to **UI Toolkit + data binding**.

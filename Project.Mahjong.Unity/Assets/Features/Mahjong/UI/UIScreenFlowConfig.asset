@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b88f0d694cdbae469dcf4a0ae1489b2, type: 3}
+  m_Name: UIScreenFlowConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectMahjong.Features.Mahjong.Data.Configs.UIScreenFlowConfig
+  _schemaVersion: 1
+  _flowId: ui.flow.default
+  _displayName: Default UI Flow
+  _defaultEntryScreen: 0
+  _transitions:
+  - _from: 0
+    _to: 1
+  - _from: 1
+    _to: 0
+  - _from: 1
+    _to: 2
+  - _from: 2
+    _to: 3
+  - _from: 3
+    _to: 1
+  - _from: 3
+    _to: 0

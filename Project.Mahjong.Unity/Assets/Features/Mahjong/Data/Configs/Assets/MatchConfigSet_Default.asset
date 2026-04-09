@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3487c39687c0c44ea846c59fd71a95a, type: 3}
+  m_Name: MatchConfigSet_Default
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectMahjong.Features.Mahjong.Data.Configs.MatchConfigSet
+  _schemaVersion: 1
+  _configSetId: match.default
+  _displayName: Default Match Config Set
+  _rules: {fileID: 11400000, guid: 70253dae8a71bec48bef04eee62725ab, type: 2}
+  _scoring: {fileID: 11400000, guid: 9cdec80326d27c042b851151488a41e2, type: 2}
+  _aiProfilesBySeatOrDifficulty:
+  - {fileID: 11400000, guid: 9461db1ea0c92864ba7cfcec9da9e3ed, type: 2}
+  - {fileID: 11400000, guid: 20477bc33b3fff74a950b294b9a89135, type: 2}
+  - {fileID: 11400000, guid: 9dd562d767ae2d7439360b5a58f2a467, type: 2}
+  _notes: Default config bundle for gameplay bootstrap.

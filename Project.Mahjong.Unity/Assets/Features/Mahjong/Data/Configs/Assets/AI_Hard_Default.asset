@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2998ab2906ee2448be4e2b1d082892f, type: 3}
+  m_Name: AI_Hard_Default
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectMahjong.Features.Mahjong.Data.Configs.AiTuningConfig
+  _schemaVersion: 1
+  _aiProfileId: ai.hard.default
+  _displayName: AI Hard
+  _difficulty: 2
+  _behaviorStyle: 1
+  _discardRandomness: 0.1
+  _offenseWeight: 1.2
+  _defenseWeight: 1.4
+  _callAggression: 0.55
+  _riskTolerance: 0.25
+  _lookaheadDepth: 2
+  _tileTrackingEnabled: 1
+  _reactionDelayMinMs: 300
+  _reactionDelayMaxMs: 700
+  _notes: Stronger defensive AI.

@@ -19,9 +19,10 @@
 ## Project conventions (all execution skills)
 
 - **Authority**: `Assets/Design/` (GDD/NDD) is source of truth for mechanics, economy, lore. Check before implementing.
-- **Stack**: Unity 6, C# 12. UGUI (Unity UI Canvas). **TextMeshPro** for all text (`TextMeshProUGUI`, `TMP_Dropdown`, `TMP_InputField`). No legacy `Text`/`Dropdown`/`InputField`.
+- **Stack**: Unity 6, C# 12. UI Toolkit is the default UI stack, with data binding preferred whenever practical. UGUI/TextMeshPro is fallback-only for unsupported scenarios.
 - **Loading**: **Addressables** for runtime loads. `Resources.Load` only for `Assets/Resources/Data/*` if allowed by project.
-- **Architecture**: Event Channels (ScriptableObject), Service Locator. Folders: `Assets/Systems` (reusable), `Assets/Features` (project), `Assets/Core` (shared glue). Follow `.cursor/rules`.
+- **Architecture**: Event Channels (ScriptableObject), Composition Root / Simple Injector (no global service locator). Folders: `Assets/Systems` (reusable), `Assets/Features` (project), `Assets/Core` (shared glue). Follow `.cursor/rules`.
+- **Data model**: Data-driven first. Put tunables/rules in ScriptableObjects or config assets; avoid hardcoded gameplay numbers in runtime scripts.
 - **Code style**: `[SerializeField] private _camelCase`; PascalCase for types/methods; Awaitable for async. Cache components in Awake; zero GetComponent in Update.
 
 ## Common constraints (all execution skills)

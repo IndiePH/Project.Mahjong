@@ -1,0 +1,113 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Features/Mahjong/UI/MainHUD.uss?fileID=7433441132597879392&amp;guid=18bb733a7c4d1204c8ee1e70af220c32&amp;type=3#MainHUD"/>
+    <ui:VisualElement name="screen-root" class="screen-root">
+        <ui:VisualElement name="main-menu-screen" class="screen-panel">
+            <ui:Label text="Main Menu" class="screen-title"/>
+            <ui:Label text="(Prototype placeholder)" class="screen-subtitle"/>
+            <ui:Button name="mainmenu-start-button" text="Start Match" class="screen-button"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="lobby-setup-screen" class="screen-panel">
+            <ui:Label text="Lobby / Match Setup" class="screen-title"/>
+            <ui:Label text="(Prototype placeholder)" class="screen-subtitle"/>
+            <ui:VisualElement class="setup-row">
+                <ui:Label text="Ruleset" class="setup-key"/>
+                <ui:DropdownField name="lobby-ruleset-dropdown" class="setup-dropdown"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="setup-row">
+                <ui:Label text="Seat Count" class="setup-key"/>
+                <ui:DropdownField name="lobby-seatcount-dropdown" class="setup-dropdown"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="setup-row">
+                <ui:Label text="AI Difficulty" class="setup-key"/>
+                <ui:DropdownField name="lobby-difficulty-dropdown" class="setup-dropdown"/>
+            </ui:VisualElement>
+            <ui:Label name="lobby-selection-summary" text="Selection: -" class="setup-summary"/>
+            <ui:Button name="lobby-start-button" text="Begin Gameplay" class="screen-button"/>
+            <ui:Button name="lobby-back-button" text="Back to Main Menu" class="screen-button secondary"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="gameplay-screen" class="screen-panel">
+            <ui:VisualElement name="hud-root" class="hud-root">
+                <ui:Label text="Mahjong Prototype HUD" class="hud-title"/>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Seat Count:" class="hud-key"/>
+                    <ui:Label name="seat-count-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Wall Remaining:" class="hud-key"/>
+                    <ui:Label name="wall-remaining-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Turns Played:" class="hud-key"/>
+                    <ui:Label name="turns-played-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Active Seat:" class="hud-key"/>
+                    <ui:Label name="active-seat-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Round End:" class="hud-key"/>
+                    <ui:Label name="round-end-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Winner Seat:" class="hud-key"/>
+                    <ui:Label name="winner-seat-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Calls:" class="hud-key"/>
+                    <ui:Label name="calls-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Windows:" class="hud-key"/>
+                    <ui:Label name="windows-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Last Call:" class="hud-key"/>
+                    <ui:Label name="last-call-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Discards:" class="hud-key"/>
+                    <ui:Label name="discards-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="hud-row">
+                    <ui:Label text="Winning Hands:" class="hud-key"/>
+                    <ui:Label name="winning-hands-value" text="-" class="hud-value"/>
+                </ui:VisualElement>
+                <ui:Label text="Player Hand (S0):" class="hud-key hand-title"/>
+                <ui:VisualElement name="player-hand-container" class="hand-container"/>
+                <ui:VisualElement class="hud-actions">
+                    <ui:Button name="gameplay-nextturn-button" text="Next Turn" class="screen-button"/>
+                    <ui:Button name="gameplay-endround-button" text="End Round" class="screen-button secondary"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="results-screen" class="screen-panel">
+            <ui:Label text="Results" class="screen-title"/>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="End Reason:" class="results-key"/>
+                <ui:Label name="results-endreason-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="Winner Seat:" class="results-key"/>
+                <ui:Label name="results-winner-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="Turns Played:" class="results-key"/>
+                <ui:Label name="results-turns-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="Calls:" class="results-key"/>
+                <ui:Label name="results-calls-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="Windows:" class="results-key"/>
+                <ui:Label name="results-windows-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="results-row">
+                <ui:Label text="Discards:" class="results-key"/>
+                <ui:Label name="results-discards-value" text="-" class="results-value"/>
+            </ui:VisualElement>
+            <ui:Button name="results-rematch-button" text="Rematch (Lobby)" class="screen-button"/>
+            <ui:Button name="results-menu-button" text="Back to Main Menu" class="screen-button secondary"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

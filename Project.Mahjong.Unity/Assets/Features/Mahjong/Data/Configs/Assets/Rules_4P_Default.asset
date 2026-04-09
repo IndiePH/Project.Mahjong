@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7d5d86b9faae343a163fa3feab358e, type: 3}
+  m_Name: Rules_4P_Default
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectMahjong.Features.Mahjong.Data.Configs.RuleSetConfig
+  _schemaVersion: 1
+  _ruleSetId: rules.4p.default
+  _displayName: 4P Default Rules
+  _supportedPlayerCount: 4
+  _tileSetMode: 0
+  _customIncludedSuits: -1
+  _wallTileCountOverride: 0
+  _allowChow: 1
+  _allowPong: 1
+  _allowKong: 1
+  _callPriority: 00000000010000000200000003000000
+  _startingHandTileCount: 13
+  _drawPerTurn: 1
+  _enableReactionWindow: 1
+  _reactionWindowMs: 4000
+  _winPatternProfile: 0
+  _allowSelfDrawBonus: 1
+  _notes: Baseline 4P rules.

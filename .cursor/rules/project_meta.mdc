@@ -5,6 +5,8 @@ alwaysApply: true
 
 # Project Meta
 - Unity 6.0.3f1, URP, NGO, New Input System.
+- UI stack: UI Toolkit first, with data binding preferred whenever practical.
+- Development model: data-driven first (prefer config assets/ScriptableObjects over hardcoded gameplay values).
 - C# 12; async uses `Awaitable`.
 - `Assets/Design/` (GDD/NDD) is the design source of truth.
 

@@ -13,7 +13,7 @@ Use for scene/UI/bootstrap setup; not for complex gameplay logic.
 - Create/modify `.unity` scenes in the correct feature path.
 - Add/organize GameObjects and required components.
 - Wire serialized references and simple inspector data.
-- Keep scenes minimal and convention-aligned (UGUI + TMP).
+- Keep scenes minimal and convention-aligned (UI Toolkit first, binding-first UI state flow).
 
 ## Hard Constraints
 - No complex gameplay/system logic implementation.

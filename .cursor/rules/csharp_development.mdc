@@ -7,7 +7,8 @@ globs: ["**/*.cs"]
 - Fields: `[SerializeField] private _camelCase`; avoid public fields.
 - Types/methods: `PascalCase`.
 - Async: Unity `Awaitable` only; avoid `async Task`.
-- Prefer Event Channels + Service Locator for decoupling.
+- Prefer Event Channels + Composition Root/Simple Injector for decoupling (no global service locator).
+- Prefer data-driven configuration (ScriptableObjects/config assets) over hardcoded constants in gameplay systems.
 - Cache dependencies in `Awake`; no `GetComponent` in `Update`.
 - Pool high-frequency objects with `UnityEngine.Pool.ObjectPool<T>`.
 - Avoid UI string churn; use `StringBuilder` for frequent TMP updates.
