@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 117
+  controlID: 103
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -324,8 +324,8 @@ MonoBehaviour:
     y: 0
     width: 617
     height: 1293
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 43
     width: 2560
     height: 36
   m_SerializedDataModeController:
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 79
     width: 1454
     height: 839
   m_SerializedDataModeController:
@@ -1342,17 +1342,17 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1524,8 +1524,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1456
-    y: 24
+    x: 1455
+    y: 79
     width: 486
     height: 839
   m_SerializedDataModeController:
@@ -1548,10 +1548,16 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -40616
-      - m_Data: -3226
-      - m_Data: -3052
-      - m_Data: -1304
+      - m_Data: -45472
+      - m_Data: -23768
+      - m_Data: -15620
+      - m_Data: -14408
+      - m_Data: -12148
+      - m_Data: -1370
+      - m_Data: -12
+      - m_Data: 51438
+      - m_Data: 51456
+      - m_Data: 51466
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1599,7 +1605,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 944
     width: 967
     height: 402
   m_SerializedDataModeController:
@@ -1626,7 +1632,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1636,19 +1642,28 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Test
+  - Assets/Design
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\Projects\Indie\Project.TD\Project.TD.Unity
+  m_LastProjectPath: E:\Projects\Indie\Project.Mahjong\Project.Mahjong.Unity
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 134}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 47242
+    - m_Data: 49360
     m_LastClickedID:
-      m_Data: 47242
-    m_ExpandedIDs: []
+      m_Data: 49360
+    m_ExpandedIDs:
+    - m_Data: 0
+    - m_Data: 49360
+    - m_Data: 49366
+    - m_Data: 49368
+    - m_Data: 49428
+    - m_Data: 49430
+    - m_Data: 49434
+    - m_Data: 50080
+    - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1706,16 +1721,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: -58724
-    m_LastClickedInstanceID: -58724
+    m_SelectedInstanceIDs: []
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 60282
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MainHUD
+      m_OriginalName: MainHUD
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1723,10 +1737,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 0
+        m_Data: 49418
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 11}
@@ -1762,8 +1776,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 969
-    y: 24
+    x: 968
+    y: 944
     width: 973
     height: 402
   m_SerializedDataModeController:
@@ -1800,8 +1814,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1944
-    y: 24
+    x: 1943
+    y: 79
     width: 616
     height: 1267
   m_SerializedDataModeController:

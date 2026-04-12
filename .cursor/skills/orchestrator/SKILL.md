@@ -15,7 +15,7 @@ You only analyze and plan; never execute work.
 - Classify complexity automatically from request scope/risk (no user tags required).
 - Select the smallest relevant skill set.
 - Build an ordered execution plan (parallel only when safe).
-- List required context paths/docs; include `Assets/Design/*` for mechanics/economy/progression.
+- List required context paths/docs; include `<ProjectName>.Documents/*` for mechanics/economy/progression.
 - Classify risk: `low` / `medium` / `high`.
 - Consult `.cursor/skills/references/meta_consultation.md` before finalizing.
 

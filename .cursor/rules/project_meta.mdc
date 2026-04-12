@@ -8,7 +8,7 @@ alwaysApply: true
 - UI stack: UI Toolkit first, with data binding preferred whenever practical.
 - Development model: data-driven first (prefer config assets/ScriptableObjects over hardcoded gameplay values).
 - C# 12; async uses `Awaitable`.
-- `Assets/Design/` (GDD/NDD) is the design source of truth.
+- `<ProjectName>.Documents/` (GDD/NDD) is the design source of truth.
 
 ## Organization
 - Assets split by `Systems/` (reusable), `Features/` (project), `Core/` (shared glue).

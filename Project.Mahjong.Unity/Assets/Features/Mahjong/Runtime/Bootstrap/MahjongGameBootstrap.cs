@@ -1,4 +1,5 @@
 using UnityEngine;
+using ProjectMahjong.Core.Composition;
 using ProjectMahjong.Features.Mahjong.Data.Configs;
 using ProjectMahjong.Features.Mahjong.Runtime.UI;
 
@@ -6,6 +7,9 @@ namespace ProjectMahjong.Features.Mahjong.Runtime.Bootstrap
 {
     public sealed class MahjongGameBootstrap : MonoBehaviour
     {
+        [Header("Composition Root (optional)")]
+        [SerializeField] private GameContext _gameContext;
+
         [SerializeField] private MatchSetupLoader _setupLoader;
         [SerializeField] private UIScreenCoordinator _screenCoordinator;
         [SerializeField] private RoundRuntimeController _roundRuntimeController;
@@ -18,8 +22,15 @@ namespace ProjectMahjong.Features.Mahjong.Runtime.Bootstrap
         [SerializeField] private int _shuffleSeed = 12345;
         [SerializeField] private int _simulateMaxTurns = 8;
 
+        private void Awake()
+        {
+            ResolveDependenciesFromContext();
+        }
+
         private void OnEnable()
         {
+            ResolveDependenciesFromContext();
+
             if (_roundRuntimeController != null)
             {
                 _roundRuntimeController.RoundStateChanged += OnRoundStateChanged;
@@ -104,6 +115,43 @@ namespace ProjectMahjong.Features.Mahjong.Runtime.Bootstrap
                 roundState.TurnResult.RoundEndReason == Gameplay.Dealing.RoundEndReason.WallExhausted)
             {
                 _screenCoordinator?.GoToResults();
+            }
+        }
+
+        private void ResolveDependenciesFromContext()
+        {
+            if (_gameContext == null)
+            {
+                _gameContext = GetComponent<GameContext>();
+            }
+
+            if (_gameContext == null)
+            {
+                _gameContext = FindFirstObjectByType<GameContext>();
+            }
+
+            if (_gameContext == null)
+            {
+                return;
+            }
+
+            TryResolveFromContext(_gameContext, ref _setupLoader);
+            TryResolveFromContext(_gameContext, ref _screenCoordinator);
+            TryResolveFromContext(_gameContext, ref _roundRuntimeController);
+            TryResolveFromContext(_gameContext, ref _hudBinder);
+        }
+
+        private static void TryResolveFromContext<TService>(GameContext gameContext, ref TService target)
+            where TService : class
+        {
+            if (target != null || gameContext == null)
+            {
+                return;
+            }
+
+            if (gameContext.TryGetService<TService>(out var service))
+            {
+                target = service;
             }
         }
     }
